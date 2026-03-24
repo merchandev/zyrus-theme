@@ -25,8 +25,8 @@ get_header();
             </p>
             
             <div>
-                <a href="#diagnostico" class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 text-sm font-sans font-medium text-zyrus-dark bg-zyrus-accent hover:bg-[#DBC18D] transition-all rounded-none mb-3 relative overflow-hidden group">
-                    <span class="relative z-10 font-bold uppercase tracking-wider">Quiero mi diagnóstico exclusivo &rarr;</span>
+                <a href="#diagnostico" class="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 text-[13px] font-sans font-medium text-zyrus-dark bg-zyrus-accent hover:bg-[#DBC18D] transition-all rounded-none mb-3 relative overflow-hidden group">
+                    <span class="relative z-10 font-bold uppercase tracking-wider">QUIERO MI DIAGNOSTICO</span>
                     <div class="absolute inset-0 -translate-x-full bg-white/30 group-hover:translate-x-full transition-transform duration-1000"></div>
                 </a>
                 <p class="text-zyrus-light font-sans font-light text-[12px] opacity-80">
@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!-- BLOQUE 4: Prueba Social -->
-<section class="py-20 lg:py-28 bg-gradient-to-b from-zyrus-dark to-zyrus-primary overflow-hidden">
+<section class="py-20 lg:py-28 bg-gradient-to-b from-zyrus-dark to-zyrus-primary">
     <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 mb-12 text-center">
         <h2 class="text-3xl md:text-5xl font-serif text-zyrus-light">
             Lo que dicen quienes ya dieron el paso
@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
     
     <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-        <div class="flex overflow-x-auto lg:grid lg:grid-cols-3 gap-6 pb-8 snap-x scrollbar-hide">
+        <div id="testimonials-container" class="flex flex-nowrap overflow-x-auto lg:grid lg:grid-cols-3 gap-6 pb-8 snap-x snap-mandatory scrollbar-hide testimonials-scroll">
             <!-- Testimonial 1 -->
             <div class="snap-center shrink-0 w-[85%] sm:w-[350px] lg:w-auto bg-white/5 backdrop-blur-sm border border-white/10 p-8">
                 <div class="mb-6">
@@ -413,8 +413,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
                 
-                <button type="submit" id="zyrus-form-submit-btn" class="w-full h-[52px] bg-zyrus-accent hover:bg-[#DBC18D] text-zyrus-dark font-sans font-semibold tracking-wider text-[14px] uppercase transition-colors flex justify-center items-center mt-4 border-none border">
-                    Quiero mi diagnóstico exclusivo &rarr;
+                <button type="submit" id="zyrus-form-submit-btn" class="w-full h-[48px] bg-zyrus-accent hover:bg-[#DBC18D] text-zyrus-dark font-sans font-semibold tracking-wider text-[13px] uppercase transition-colors flex justify-center items-center mt-4 border-none border">
+                    QUIERO MI DIAGNOSTICO
                 </button>
                 
                 <div class="text-center mt-6 space-y-1">

@@ -16,6 +16,10 @@
         details > summary::-webkit-details-marker { display: none; }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+        .testimonials-scroll {
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior-x: contain;
+        }
     </style>
     <!-- Meta Pixel Code Placeholder -->
     <!-- Start Pixel -->

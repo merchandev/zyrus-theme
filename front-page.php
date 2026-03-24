@@ -39,7 +39,7 @@ get_header();
         
         <!-- Right Side: Video Reel -->
         <div class="relative mx-auto lg:ml-auto w-full max-w-[340px] aspect-[9/16] rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl bg-black">
-            <video src="https://merchan.dev/wp-content/uploads/2026/03/NO-ES-SOLO-ESTETICA_1.mp4" class="w-full h-full object-cover object-center" autoplay loop muted playsinline controls aria-label="Simulación digital de sonrisa"></video>
+            <video src="https://zyrussmile.center/wp-content/uploads/2026/03/CUANTO-TARDA-REALMENTE-.mp4" class="w-full h-full object-cover object-center" autoplay loop muted playsinline controls aria-label="Simulación digital de sonrisa"></video>
         </div>
     </div>
 </header>
@@ -115,7 +115,7 @@ get_header();
         
         <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div class="aspect-[9/16] w-full max-w-[380px] bg-black rounded-[2rem] overflow-hidden shadow-2xl border border-white/5">
-                <video src="https://merchan.dev/wp-content/uploads/2026/03/photoshop-.mp4" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity" autoplay loop muted playsinline aria-label="Simulación digital de sonrisa"></video>
+                <video src="https://zyrussmile.center/wp-content/uploads/2026/03/photoshop-.mp4" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity" autoplay loop muted playsinline aria-label="Simulación digital de sonrisa"></video>
             </div>
         </div>
     </div>
@@ -143,11 +143,11 @@ get_header();
         <div id="gallery-container" class="flex flex-nowrap overflow-x-auto gap-6 pb-8 scrollbar-hide snap-x scroll-smooth">
             <?php
             $default_videos = [
-                'https://merchan.dev/wp-content/uploads/2026/03/¡El-antes-y-despues-de-nuestra-paciente-habla-por-si-solo-✨-Con-nuestros-tratamientos-de-blanqu.mp4',
-                'https://merchan.dev/wp-content/uploads/2026/03/Nos-encanta-ver-a-nuestros-pacientes-felices-con-su-nueva-sonrisa-Zyrus.-😄💙Una-sonrisa-transfo.mp4',
-                'https://merchan.dev/wp-content/uploads/2026/03/¡Lista-para-el-gran-dia-👰🏼💍-conoce-el-testimonio-de-nuestra-paciente-quien-se-preparo-para-.mp4',
-                'https://merchan.dev/wp-content/uploads/2026/03/✨💙En-Zyrus-nos-enorgullece-brindar-una-atencion-personalizada-y-de-calidad-a-cada-uno-de-nuest.mp4',
-                'https://merchan.dev/wp-content/uploads/2026/03/¡Cada-sonrisa-que-transformamos-nos-llena-de-orgullo-💙Con-nuestras-carillas-dentales-personali.mp4'
+                'https://zyrussmile.center/wp-content/uploads/2026/03/¡El-antes-y-despues-de-nuestra-paciente-habla-por-si-solo-✨-Con-nuestros-tratamientos-de-blanqu.mp4',
+                'https://zyrussmile.center/wp-content/uploads/2026/03/Nos-encanta-ver-a-nuestros-pacientes-felices-con-su-nueva-sonrisa-Zyrus.-😄💙Una-sonrisa-transfo.mp4',
+                'https://zyrussmile.center/wp-content/uploads/2026/03/¡Lista-para-el-gran-dia-👰🏼💍-conoce-el-testimonio-de-nuestra-paciente-quien-se-preparo-para-.mp4',
+                'https://zyrussmile.center/wp-content/uploads/2026/03/✨💙En-Zyrus-nos-enorgullece-brindar-una-atencion-personalizada-y-de-calidad-a-cada-uno-de-nuest.mp4',
+                'https://zyrussmile.center/wp-content/uploads/2026/03/¡Cada-sonrisa-que-transformamos-nos-llena-de-orgullo-💙Con-nuestras-carillas-dentales-personali.mp4'
             ];
             
             $video_query = new WP_Query(array(
@@ -355,7 +355,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 
 <!-- BLOQUE 7: Formulario de Captación -->
-<section id="diagnostico" class="py-20 lg:py-32 relative bg-cover bg-center" style="background-image: url('https://merchan.dev/wp-content/uploads/2026/03/textured-wall-background-texture-scaled.jpg');">
+<section id="diagnostico" class="py-20 lg:py-32 relative bg-cover bg-center" style="background-image: url('https://zyrussmile.center/wp-content/uploads/2026/03/textured-wall-background-texture-scaled.jpg');">
     <!-- Texture overlay for readability -->
     <div class="absolute inset-0 bg-zyrus-light/85 backdrop-blur-[2px]"></div>
     

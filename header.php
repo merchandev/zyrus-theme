@@ -32,7 +32,7 @@
     <div class="w-full max-w-7xl mx-auto px-6 lg:px-16 flex justify-center items-center">
         <!-- Logo -->
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="block transition hover:opacity-80">
-            <img src="https://merchan.dev/wp-content/uploads/2026/03/LOGO-NUEVO-ZYRUS_blanco-scaled-e1774318899491.png" alt="Zyrus" class="h-8 md:h-10 w-auto">
+            <img src="https://zyrussmile.center/wp-content/uploads/2026/03/LOGO-NUEVO-ZYRUS_blanco-scaled-e1774318899491.png" alt="Zyrus" class="h-8 md:h-10 w-auto">
         </a>
     </div>
 </nav>

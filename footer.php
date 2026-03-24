@@ -5,7 +5,7 @@
         <div class="flex flex-col md:flex-row flex-wrap justify-between items-center gap-6">
             <!-- Logo -->
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="block opacity-80 hover:opacity-100 transition">
-                <img src="https://merchan.dev/wp-content/uploads/2026/03/LOGO-NUEVO-ZYRUS_blanco-scaled-e1774318899491.png" alt="Zyrus" class="h-6 w-auto">
+                <img src="https://zyrussmile.center/wp-content/uploads/2026/03/LOGO-NUEVO-ZYRUS_blanco-scaled-e1774318899491.png" alt="Zyrus" class="h-6 w-auto">
             </a>
             
             <div class="flex items-center gap-6 text-zyrus-light/60 text-sm">

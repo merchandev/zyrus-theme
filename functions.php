@@ -12,33 +12,28 @@ endif;
 add_action( 'after_setup_theme', 'zyrus_setup' );
 
 function zyrus_scripts() {
-	wp_enqueue_style( 'zyrus-style', get_stylesheet_uri(), array(), '2.0.0' );
-    wp_enqueue_script( 'tailwindcss', 'https://cdn.tailwindcss.com', array(), null, false );
-    
-    $tailwind_config = "
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        zyrus: {
-                            dark: '#0D1B2A',       // Azul Noche
-                            primary: '#1A3A5C',    // Azul Medio
-                            ice: '#C8D8E8',        // Azul Hielo
-                            accent: '#C9A96E',     // Dorado Mate
-                            light: '#F5F0EB',      // Blanco Cálido
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Montserrat', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-                        serif: ['Cormorant Garamond', 'ui-serif', 'Georgia', 'serif'],
-                    }
-                }
-            }
-        }
-    ";
-    wp_add_inline_script( 'tailwindcss', $tailwind_config );
+	$theme_version = wp_get_theme()->get( 'Version' );
+	$compiled_style_path = get_template_directory() . '/assets/css/theme.css';
+	$has_compiled_style = file_exists( $compiled_style_path );
+	$style_version = $has_compiled_style
+		? (string) filemtime( $compiled_style_path )
+		: $theme_version;
+	$script_version = file_exists( get_template_directory() . '/assets/js/main.js' )
+		? (string) filemtime( get_template_directory() . '/assets/js/main.js' )
+		: $theme_version;
 
-    wp_enqueue_script( 'zyrus-main', get_template_directory_uri() . '/assets/js/main.js', array(), '1.0.0', true );
+	if ( $has_compiled_style ) {
+		wp_enqueue_style(
+			'zyrus-theme',
+			get_template_directory_uri() . '/assets/css/theme.css',
+			array(),
+			$style_version
+		);
+	} else {
+		wp_enqueue_style( 'zyrus-style', get_stylesheet_uri(), array(), $theme_version );
+	}
+
+    wp_enqueue_script( 'zyrus-main', get_template_directory_uri() . '/assets/js/main.js', array(), $script_version, true );
     wp_localize_script( 'zyrus-main', 'zyrusTheme', array(
         'ajaxUrl' => admin_url( 'admin-ajax.php' ),
         'whatsappTrackNonce' => wp_create_nonce( 'zyrus_track_whatsapp_click' ),
@@ -46,6 +41,22 @@ function zyrus_scripts() {
     ) );
 }
 add_action( 'wp_enqueue_scripts', 'zyrus_scripts' );
+
+function zyrus_preload_front_page_assets() {
+	if ( ! is_front_page() ) {
+		return;
+	}
+
+	$hero_poster_path = get_template_directory() . '/assets/image/HERO1.webp';
+
+	if ( file_exists( $hero_poster_path ) ) {
+		printf(
+			'<link rel="preload" as="image" href="%s" fetchpriority="high">' . "\n",
+			esc_url( get_template_directory_uri() . '/assets/image/HERO1.webp' )
+		);
+	}
+}
+add_action( 'wp_head', 'zyrus_preload_front_page_assets', 1 );
 
 /**
  * Register Custom Post Type: Videos Verticales

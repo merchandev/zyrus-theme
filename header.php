@@ -6,21 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <?php wp_head(); ?>
-    <style>
-        html { scroll-behavior: smooth; }
-        .font-serif { font-family: 'Cormorant Garamond', serif; }
-        .font-sans { font-family: 'Montserrat', sans-serif; }
-        details > summary { list-style: none; }
-        details > summary::-webkit-details-marker { display: none; }
-        .scrollbar-hide::-webkit-scrollbar { display: none; }
-        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-        .testimonials-scroll {
-            -webkit-overflow-scrolling: touch;
-            overscroll-behavior-x: contain;
-        }
-    </style>
     <!-- Meta Pixel Code Placeholder -->
     <!-- Start Pixel -->
     <!-- End Pixel -->

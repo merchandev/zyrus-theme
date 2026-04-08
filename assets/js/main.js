@@ -138,4 +138,58 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // 5. Home gallery controls and video behavior
+    const galleryContainer = document.getElementById('gallery-container');
+    const btnPrev = document.getElementById('btn-prev-gallery');
+    const btnNext = document.getElementById('btn-next-gallery');
+
+    if (galleryContainer && btnPrev && btnNext) {
+        const cardWidth = 280;
+        const gap = 24;
+        const scrollAmount = cardWidth + gap;
+
+        btnNext.addEventListener('click', () => {
+            galleryContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+
+        btnPrev.addEventListener('click', () => {
+            galleryContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+    }
+
+    const allVideos = document.querySelectorAll('video');
+    const galleryVideos = document.querySelectorAll('#gallery-container video');
+
+    allVideos.forEach((video) => {
+        video.addEventListener('play', function resetToZero() {
+            if (this.currentTime > 0.5) {
+                this.currentTime = 0;
+            }
+
+            this.removeEventListener('play', resetToZero);
+        });
+    });
+
+    galleryVideos.forEach((video) => {
+        video.addEventListener('play', () => {
+            galleryVideos.forEach((currentVideo) => {
+                if (currentVideo !== video && !currentVideo.paused) {
+                    currentVideo.pause();
+                }
+            });
+
+            const overlay = video.nextElementSibling;
+            if (overlay && overlay.classList.contains('title-overlay')) {
+                overlay.style.opacity = '0';
+            }
+        });
+
+        video.addEventListener('pause', () => {
+            const overlay = video.nextElementSibling;
+            if (overlay && overlay.classList.contains('title-overlay')) {
+                overlay.style.opacity = '';
+            }
+        });
+    });
 });
